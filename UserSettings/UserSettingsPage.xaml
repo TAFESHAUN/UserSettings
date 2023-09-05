@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UserSettings.UserSettingsPage"
+             Title="UserSettingsPage">
+    <VerticalStackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0">ENTER YOUR NAME</Label>
+            <Entry Grid.Column="0" x:Name="NameEntry"></Entry>
+            
+            <Label Grid.Row="1">Change Theme</Label>
+            <Switch x:Name="togTheme" Grid.Row="2" Toggled="OnThemeSwitchToggled" BackgroundColor="DimGrey" />
+
+            <Label Grid.Column="1">ENTER YOUR AGE</Label>
+            <Entry Grid.Column="1" x:Name="AgeEntry"></Entry>
+
+            <Label Grid.Row="2" Grid.Column="1">ENTER SOME NEW DATA</Label>
+            <Entry Grid.Row="3" Grid.Column="1" x:Name="someEntry"></Entry>
+
+            <Button Grid.Row="4" Grid.Column="1" Clicked="SaveButton_Clicked" Text="SAVE USER SETTINGS"></Button>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
