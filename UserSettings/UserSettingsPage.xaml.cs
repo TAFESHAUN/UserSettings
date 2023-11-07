@@ -29,6 +29,24 @@ public partial class UserSettingsPage : ContentPage
         _database.CreateTableAsync<UserSet>().Wait();
         //_database.DeleteAllAsync<UserSet>().Wait();
 
+        //TABLE SETS in SQLite Database
+            //  -> Settings are cross compat and one-size-fits all solution
+        //Local Account Info
+        //Text Settings
+        //Sound Settings
+        //Video Settings
+        //Stream Settings/Quality Settings
+
+        //Options
+        //Graphics
+        //Video
+        //Online
+        //Previous/History
+        //Purchase History -> BY id OR Purchase code (code safe as a reference)
+        
+        //Usuability, Text to Speech, E-Reader, Reader Options
+        //AR, VR options, Balance settings for 3D camera pod.
+
         // Load the user settings
         LoadUserSettings();
     }
